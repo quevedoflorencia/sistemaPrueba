@@ -163,13 +163,32 @@ public class testSitema {
 	
 		Sistema sistemaUnlam= new Sistema ("asistenciaUnlam", 3);
 		
-		Usuario usuarioActual= new Usuario ("juan", "pb2",44, ESTADO.CREADO);
+		Usuario usuarioActual= new Usuario ("juan", "pb2",42, ESTADO.CREADO);
 	
 	
 		
 		sistemaUnlam.agregarUnUsuario(usuarioActual);
 		
 		assertTrue(sistemaUnlam.loguearUsuario1(usuarioActual));
+	
+			
+		
+	}
+	@Test
+	public void queSePuedaLoguearUnUsuarioVersion2() {
+	
+		//String usuarioEsperado="juan";
+		//String contraseniaEsperada= "pb2";
+	
+		Sistema sistemaUnlam= new Sistema ("asistenciaUnlam", 3);
+		
+		Usuario usuarioActual= new Usuario ("juan", "pb2",44, ESTADO.CREADO);
+	
+	
+		
+		sistemaUnlam.agregarUnUsuario2(usuarioActual.getNombre(), usuarioActual.getContrasenia());
+		
+		
 	
 			
 		

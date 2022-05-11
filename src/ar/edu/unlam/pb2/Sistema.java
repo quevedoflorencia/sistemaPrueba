@@ -142,6 +142,29 @@ public class Sistema {
 		}
 		return sePudoLoguear;
 	}
+
+	public Boolean loguearUnUsuario2(String nomnbre, String contrasenia) {
+		
+		Boolean sePudoLoguear=false;
+		
+		for (Usuario usuario : usuarios) {
+			if ((usuario.getNombre().equals(nomnbre))&& usuario.getContrasenia().equals(contrasenia)) {
+				usuario.setESTADO(ESTADO.LOGUEADO);
+				sePudoLoguear=true;
+			} 
+		}
+		
+			
+		return sePudoLoguear;
+		
+
+		
+	}
+
+	public void agregarUnUsuario2(String nombre, String contrasenia) {
+		
+		
+	}
 		
 }
 
